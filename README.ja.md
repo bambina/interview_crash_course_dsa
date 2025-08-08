@@ -12,6 +12,11 @@ list末尾への追加はamortized O(1)。最悪の場合は、容量不足の�
 - Two pointers
   - Opposite Ends: 2つのポインタをlist前後から走査する。2つのポインタが出会うまで各ループで近づくので計算時間はO(n)。空間はO(1)。2つのiterablesがある場合はO(n+m)。
   - Sliding window: 2つのポインタを同じ場所から開始して、片方が先に進む。制約条件を満たすcurrを持つsubarrayを探す。計算時間はO(n)。空間はO(1)。valid subarrayの数と長さは right-left+1。
+- Prefix sum: 前処理として要素の累積和をO(n)で作る。Prefix sumを使い要素間(i to j)の総和をO(1)で求める。
+```python
+prefix[j] - prefix[i] + nums[i]
+```
+
 
 
 ## Linked lists

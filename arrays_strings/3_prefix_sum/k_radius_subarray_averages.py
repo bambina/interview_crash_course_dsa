@@ -7,22 +7,20 @@
 
 def get_averages(nums: list[int], k: int) -> list[int]:
   n = len(nums)
-  len_subarr = 2*k+1
-  res = [-1] * n
-  if len_subarr > n:
-    return res
+  ans = [-1]*n
+  subarr_len = 2*k+1
+  if len(nums) < subarr_len:
+    return ans
 
-  i = k
-  curr_total = sum(nums[:len_subarr])
-  res[i] = curr_total // len_subarr
+  curr = 0
+  for i in range(n):
+    curr += nums[i]
+    start = i-subarr_len+1
+    if start >= 0:
+      ans[i-k] = curr // subarr_len
+      curr -= nums[start]
 
-  while i < (n - k - 1):
-    curr_total -= nums[i-k]
-    i += 1
-    curr_total += nums[i+k]
-    res[i] = curr_total // len_subarr
-
-  return res
+  return ans
 
 
 test_cases = [
