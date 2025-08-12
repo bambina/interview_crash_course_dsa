@@ -17,8 +17,6 @@ list末尾への追加はamortized O(1)。最悪の場合は、容量不足の�
 prefix[j] - prefix[i] + nums[i]
 ```
 
-
-
 ## Linked lists
 
 長所:
@@ -35,6 +33,10 @@ prefix[j] - prefix[i] + nums[i]
 テクニック:
 - Fast and slow pointers: O(n) でcycle検知やmiddle node取得ができる
 - Reversing: ポインタの付け替え。考えた手順と実行手順は必ずしも一致しない
+
+## Stacks
+
+
 ----
 
 
