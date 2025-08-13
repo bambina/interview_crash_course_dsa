@@ -36,6 +36,7 @@ prefix[j] - prefix[i] + nums[i]
 
 ## Stacks
 
+## Queues
 
 ----
 
