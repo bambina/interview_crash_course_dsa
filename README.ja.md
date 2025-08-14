@@ -51,3 +51,6 @@ prefix[j] - prefix[i] + nums[i]
 
 - **Subsequence**: A sequence of characters that can be derived from another string by deleting zero or more characters, without changing the order of the remaining characters.  
   _Example_: `"ace"` is a subsequence of `"abcde"`.
+
+- **Monotonic**: (of a function or quantity) varying in such a way that it either never decreases or never increases. In other words, the values move in only one direction — either non-decreasing (never going down) or non-increasing (never going up). Equal values are allowed in both cases.
+_Example_: `[1, 2, 2, 3]` is non-decreasing; `[5, 4, 4, 2]` is non-increasing.
